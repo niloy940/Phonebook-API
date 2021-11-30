@@ -29,7 +29,7 @@ Route::middleware('auth:api')->group(function () {
 
     Route::middleware('admin')->group(function () {
         Route::apiResource('/users', UserController::class);
-        Route::get('/contacts/all/day', [StatsController::class, 'day']);
+        Route::get('/contacts/all/today', [StatsController::class, 'today']);
         Route::get('/contacts/all/week', [StatsController::class, 'week']);
         Route::get('/contacts/all/month', [StatsController::class, 'month']);
     });
